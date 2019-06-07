@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="row p-5">
             <div class="col-6 p-5">
                 <p>#Дом тканей</p>
@@ -41,13 +41,51 @@
                 </p>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-6 p-5">
-                <div style="background-image: url({{asset('/images/3.png')}}) 100% 100% no-repeat;">
-
+                <div class="row justify-content-center p-5" style="background-image: url({{asset('/images/3.png')}}); background-size: cover; background-position: center; ">
+                    <div class="p-5 mb-5">
+                        <p class="h2 px-5 pt-5 pb-4" style="font-size: 35px;color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
+                            Ткани
+                        </p>
+                        <div class="col-9" style="text-align: center; vertical-align: middle;">
+                            <a class="px-5 py-2 mb-5 bg-white " href=""  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
+                                Смотреть
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 p-5"></div>
+            <div class="col-6 p-5">
+                <div class="row justify-content-center p-5" style="background-image: url({{asset('/images/4.png')}}); background-size: cover; background-position: center; ">
+                    <div class="p-5 mb-5">
+                        <p class="h2 px-5 pt-5 pb-4" style="font-size: 35px;color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
+                            Ателье
+                        </p>
+                        <div class="col-9"  style="display:inline-block;">
+                            <a class="px-5 py-2 mb-5 bg-white " href=""  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
+                                Смотреть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 px-5 py-2" >
+                    <div class="row justify-content-center p-5" style="background-image: url({{asset('/images/5.png')}}); background-size: cover; background-position: center; ">
+                        <div class="p-5 mb-5"  style="text-align: center; vertical-align: middle;" >
+                            <p class="h2 px-5 pt-5 pb-4" style="font-size: 35px;color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
+                                Готовые вещи
+                            </p>
+                            <div class="col-9" style="display:inline-block;">
+                                <a class="px-5 py-2 mb-5 bg-white " href=""  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
+                                    Смотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
+
+    @include('_partials/footer')
 @endsection
