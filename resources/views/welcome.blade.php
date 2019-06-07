@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid py-5 position-relative" style="background-image: url('{{ asset('images/image.jpg') }}'); background-size: cover; background-position: center right">
+    <div class="container-fluid py-5 position-relative" style="background-image: url('{{ asset('public/images/image.jpg') }}'); background-size: cover; background-position: center right">
         <div class="backdrop"></div>
         <div class="row py-5 py-md-5 justify-content-center">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 py-5 text-center" style="padding:250px!important;">
-                <img src="{{asset('images/2.png')}}" alt="">
+                <img src="{{asset('public/images/2.png')}}" alt="">
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
                 </p>
             </div>
             <div class="col-6 text-right">
-                <img src="{{asset('images/1.jpg')}}" alt="">
+                <img src="{{asset('public/images/1.jpg')}}" alt="">
             </div>
         </div>
         <div class="row mt-5">
@@ -43,7 +43,7 @@
         </div>
         <div class="row">
             <div class="col-6 p-5">
-                <div style="background-image: url({{asset('images/3.png')}}) 100% 100% no-repeat;">
+                <div style="background-image: url({{asset('public/images/3.png')}}) 100% 100% no-repeat;">
 
                 </div>
             </div>
