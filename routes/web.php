@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/cloth', function () {
+//    return view('cloth');
+//})->name('cloth');
+Route::get('/cloth', 'HomeController@cloth')->name('cloth');

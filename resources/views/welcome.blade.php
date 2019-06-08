@@ -77,7 +77,7 @@
                                 Готовые вещи
                             </p>
                             <div class="col-9" style="display:inline-block;">
-                                <a class="px-5 py-2 mb-5 bg-white " href=""  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
+                                <a class="px-5 py-2 mb-5 bg-white " href="{{asset('cloth')}}"  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
                                     Смотреть
                                 </a>
                             </div>
@@ -87,5 +87,5 @@
         </div>
     </div>
 
-    @include('_partials/footer')
+
 @endsection

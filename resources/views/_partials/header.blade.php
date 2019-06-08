@@ -3,22 +3,24 @@
     <div class="container">
         <div class="row w-100">
             <div class="col-3 px-4 py-3">
+                <a href="/">
                 <img class="w-100" src="{{asset('images/2.png')}}" alt="">
+                </a>
             </div>
             <div class="col-7 collapse navbar-collapse">
                 <nav style="margin: auto;">
                     <ul class="navbar-nav d-none d-lg-flex">
                         <li class="nav-item p-3">
-                            <a class="text-white" href="">Ткани</a>
+                            <a class="text-white" href="{{asset('cloth')}}">Ткани</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="text-white" href="">Ателье</a>
+                            <a class="text-white" href="{{asset('studio')}}">Ателье</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="text-white" href="">Шоурум</a>
+                            <a class="text-white" href="{{asset('showroom')}}">Шоурум</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="text-white" href="">Контакты</a>
+                            <a class="text-white" href="{{asset('contact')}}">Контакты</a>
                         </li>
 
                     </ul>
