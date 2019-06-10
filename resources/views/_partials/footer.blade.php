@@ -39,7 +39,7 @@
                 </nav>
             </div>
 
-            <div class="col-md-3 col-lg-3 col-12 col-sm-6 mx-5 pt-3">
+            <div class="col-md-3 col-lg-3 col-10 col-sm-6 mx-5 pt-3">
                 <div class="nav-link d-md-none d-block">
                     <img class="mr-5" src="{{asset('images/icons/facebook.png')}}" alt="">
                     <img class="mr-5" src="{{asset('images/icons/instagram.png')}}" alt="">
