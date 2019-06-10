@@ -28,3 +28,30 @@
     font-weight: 900;
     font-style: normal;
 }
+
+.main-pic {
+    padding:250px!important;
+}
+
+.content-container {
+    margin-top: 120px!important;
+}
+
+@media screen and (max-width: 1000px) {
+    .pic-75 {
+        width:75%;
+    }
+    .pic-100 {
+        width:100%;
+    }
+    .pic-50 {
+        width:50%;
+    }
+    .main-pic
+    {
+        padding: 0px!important;
+    }
+    .content-container {
+        margin-top:0px!important;
+    }
+}

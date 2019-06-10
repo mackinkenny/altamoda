@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-            @include('_partials/header')
+            {{--@include('_partials/header')--}}
         <main>
             @yield('content')
         </main>
