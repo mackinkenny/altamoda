@@ -11,13 +11,13 @@
                 <nav style="margin: auto;">
                     <ul class="navbar-nav d-none d-lg-flex">
                         <li class="nav-item p-3">
-                            <a class="text-white" href="{{asset('clothes')}}">Ткани</a>
+                            <a class="text-white" href="{{asset('/clothes')}}">Ткани</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="text-white" href="{{asset('studio')}}">Ателье</a>
+                            <a class="text-white" href="{{asset('/studios')}}">Ателье</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="text-white" href="{{asset('showroom')}}">Шоурум</a>
+                            <a class="text-white" href="{{asset('/showrooms')}}">Шоурум</a>
                         </li>
                         <li class="nav-item p-3">
                             <a class="text-white" href="{{asset('contact')}}">Контакты</a>

@@ -22,18 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 //    return view('cloth');
 //})->name('cloth');
 //Route::get('/cloth', 'HomeController@cloth')->name('cloth');
-Route::get('/clothes', function () {
-    return view('cloth.list');
-});
-
-Route::get('/showroom', function () {
-    return view('showroom');
-});
-
-Route::get('/studio', function () {
-    return view('studio');
-});
-
 Route::get('/admin', function ()
 {
    return view('admin.login');
@@ -46,6 +34,25 @@ Route::get('/admin', function ()
 
 //resources//
 Route::resource('cloth', 'ClothController');
+Route::resource('studio', 'StudioController');
+Route::resource('showroom', 'ShowroomController');
+Route::get('/cloth.catalog','ClothController@catalog');
+
+Route::get('/clothes', function()
+{
+   return view('cloth.cloth');
+});
+
+Route::get('/studios', function()
+{
+    return view('studio.studio');
+});
+
+Route::get('/showrooms', function()
+{
+    return view('showroom.showroom');
+});
 
 //datatables//
 Route::get('datatable/getclothes', 'AdminController@getClothes')->name('datatable.getclothes');
+Route::get('datatable/getstudios', 'AdminController@getStudios')->name('datatable.getstudios');

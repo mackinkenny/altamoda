@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
+    @stack('stylesheets')
 </head>
 <body>
 <div id="app">

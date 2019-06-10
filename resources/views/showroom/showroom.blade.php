@@ -20,7 +20,7 @@
                         <p class="h2 px-5 pt-5 pb-4 font-weight-bold" style="color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
                             Женская одежда
                         </p>
-                            <a class="px-4 py-2 bg-dark" href="" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
+                        <a class="px-4 py-2 bg-dark" href="" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         <p class="h2 px-5 pt-5 pb-4 font-weight-bold" style="color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
                             Мужская одежда
                         </p>
-                            <a class="px-4 py-2 bg-dark" href="" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
+                        <a class="px-4 py-2 bg-dark" href="" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                         <p class="h2 px-5 pt-5 pb-4 font-weight-bold" style="color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
                             Детская одежда
                         </p>
-                            <a class="px-4 py-2 bg-dark" href="" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
+                        <a class="px-4 py-2 bg-dark" href="" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
                     </div>
                 </div>
             </div>
