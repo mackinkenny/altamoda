@@ -10,10 +10,10 @@
             </div>
             <div class="col-md-3 col-lg-3 col-6 col-sm-6 my-3 pt-md-3 pt-0">
                 <nav class="nav flex-column">
-                    <a class="nav-link text-white" href="{{asset('about_us')}}">О нас</a>
-                    <a class="nav-link text-white" href="{{asset('cloth')}}">Ткани</a>
-                    <a class="nav-link text-white" href="{{asset('studio')}}">Ателье</a>
-                    <a class="nav-link text-white" href="{{asset('showroom')}}">Готовые вещи</a>
+                    <a class="nav-link text-white" href="/">О нас</a>
+                    <a class="nav-link text-white" href="{{route('cloth.index')}}">Ткани</a>
+                    <a class="nav-link text-white" href="{{route('kind.index')}}">Ателье</a>
+                    <a class="nav-link text-white" href="{{route('showroom.index')}}">Готовые вещи</a>
                 </nav>
             </div>
 

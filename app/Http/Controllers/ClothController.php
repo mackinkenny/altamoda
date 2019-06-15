@@ -3,41 +3,66 @@
 namespace App\Http\Controllers;
 
 use App\Cloth;
+use App\Season;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class ClothController extends Controller
 {
     //
     public function index()
     {
+        $seasons = Season::all();
+
+        return view('cloth.list',['seasons' => $seasons]);
+    }
+
+    public function admin()
+    {
         return view('admin.tables.cloth_index');
     }
 
     public function create()
     {
-        return view('cloth.create');
+        $seasons = Season::all();
+
+        return view('cloth.create',['seasons' => $seasons]);
     }
 
     public function store(Request $request)
     {
         $cloth = Cloth::create($request->all());
-//        $filename = time().'.'.request()->img_path->getClientOriginalExtension();
-//        request()->img_path->move(public_path('uploads/clothes'), $filename);
-//
-//        $cloth->img_path=$filename;
-//        $cloth->save();
 
-        return redirect()->route('cloth.index');
+        $cloth->season_id = $request->type;
+
+        if($file = $request->file('img_path')){
+            $name = 'cloth_img'.$cloth->id.$file->getClientOriginalName();
+             if ($file->move('uploads', $name))
+             {
+                 $cloth->img_path = mb_strtolower($name);
+                 $cloth->save();
+             }
+        }
+
+        return redirect()->route('cloth.create');
     }
 
     public function show()
     {
     }
 
-    public function catalog()
+    public function destroy(Cloth $cloth)
     {
-        $clothes = Cloth::all();
+        $cloth->delete();
+        return redirect()->back();
+    }
 
-        return view('cloth.catalog',['clothes' => $clothes]);
+    public function catalog($id)
+    {
+        $season = Season::find($id);
+        $clothes = $season->clothes;
+
+        return view('cloth.catalog',['season' => $season, 'clothes' => $clothes]);
     }
 }

@@ -16,14 +16,20 @@
 
         <div class="form-group">
             <label for="type">Выберите тип сезона</label>
-            <select name="type" id="type">
-                <option value="{{null}}">Выберите...</option>
-                    <option value="Лето">Лето</option>
-                    <option value="Весна">Весна</option>
-                    <option value="Зима">Зима</option>
-                    <option value="Осень">Осень</option>
+            {{--<select name="type" id="type">--}}
+                {{--<option value="{{null}}">Выберите...</option>--}}
+                    {{--<option value="Лето">Лето</option>--}}
+                    {{--<option value="Весна">Весна</option>--}}
+                    {{--<option value="Зима">Зима</option>--}}
+                    {{--<option value="Осень">Осень</option>--}}
 
-            </select>
+            {{--</select>--}}
+                <select name="type" id="type" class="form-control">
+                    <option value="{{ null }}">Выберите тип...</option>
+                    @foreach($seasons as $season)
+                        <option value="{{ $season->id }}" {{ isset($cloth) && $cloth->season_id == $season->id ? 'selected' : '' }}>{{ $season->name }}</option>
+                    @endforeach
+                </select>
         </div>
 
         <div class="form-group">

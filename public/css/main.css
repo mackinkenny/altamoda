@@ -37,6 +37,21 @@
     margin-top: 120px!important;
 }
 
+.button-moda {
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+
+.button-moda:hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+
+}
+
 @media screen and (max-width: 1000px) {
     .pic-75 {
         width:75%;

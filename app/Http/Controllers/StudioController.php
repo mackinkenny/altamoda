@@ -9,14 +9,21 @@ class StudioController extends Controller
 {
     public function index()
     {
+        return view('studio.list');
+    }
+
+    public function admin()
+    {
         return view('admin.tables.studio_index');
     }
+
     public function create()
     {
         return view('studio.create', [
             'studios' => Studio::all(),
         ]);
     }
+
     public function store(Request $request)
     {
         $studio = new Studio();

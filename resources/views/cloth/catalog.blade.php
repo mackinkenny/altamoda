@@ -6,14 +6,14 @@
         <div class="row mt-5">
             <div class="col-6">
                 <p class="display-3 text-secondary">
-                    {{$clothes->first()->type}}
+                    {{$season->name}}
                 </p>
                 <div class="">
                     <a class="text-secondary" href="/">Главная</a>
                     <i class="mx-4 text-secondary fa fa-angle-right"></i>
-                    <a class="text-secondary" href="{{asset('/clothes')}}">Ткани</a>
+                    <a class="text-secondary" href="{{asset('cloth.index')}}">Ткани</a>
                     <i class="mx-4 text-secondary fa fa-angle-right"></i>
-                    <span class="text-secondary"    >{{$clothes->first()->type}}</span>
+                    <span class="text-secondary"    >{{$season->name}}</span>
                 </div>
             </div>
         </div>

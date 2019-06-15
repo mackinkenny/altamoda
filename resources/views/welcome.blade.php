@@ -24,10 +24,17 @@
                 <p class="h2" style="font-size: 15px;color: #050505;line-height: 22px;text-align: left; font-family:'Montserrat'; font-weight:400;font-style:normal">
                     Покупая то или иное изделие, Вы покупаете не только платье, юбку, или блузу, Вы покупаете право на эксклюзивность, право на самовыражение,индивидуальность и, конечно, качество.
                 </p>
+                <div class="mt-5">
+                <a href="" class="py-2 px-3 border border-dark text-dark button-moda" style="text-decoration: none; border-width: 2px!important;">
+                    Подробнее
+                </a>
+                </div>
             </div>
             <div class="col-md-6 col-12 text-right p-0">
                 <img class="pic-100" src="{{asset('/images/1.jpg')}}" alt="">
             </div>
+
+
         </div>
         <div class="row mt-5">
             <div class="col-12 col-md-6 p-md-0 p-3">
@@ -53,7 +60,7 @@
                             Ткани
                         </p>
                         <div class="col-9" style="text-align: center; vertical-align: middle;">
-                            <a class="px-5 py-2 mb-5 bg-white " href=""  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
+                            <a class="px-5 py-2 mb-5 bg-white " href="{{ route('cloth.index') }}"  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
                                 Смотреть
                             </a>
                         </div>
@@ -67,7 +74,7 @@
                             Ателье
                         </p>
                         <div class="col-9"  style="display:inline-block;">
-                            <a class="px-5 py-2 mb-5 bg-white " href=""  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
+                            <a class="px-5 py-2 mb-5 bg-white " href="{{ route('kind.index') }}"  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
                                 Смотреть
                             </a>
                         </div>
@@ -81,7 +88,7 @@
                                 Готовые вещи
                             </p>
                             <div class="col-9 px-4">
-                                <a class="px-5 py-2 mx-md-5 mx-0 mb-5 bg-white " href="{{asset('cloth')}}"  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
+                                <a class="px-5 py-2 mx-md-5 mx-0 mb-5 bg-white " href="{{ route('showroom.index') }}"  style="display:inline-block; text-decoration: none; color: #000; font-weight: bold; font-size: 20px;">
                                     Смотреть
                                 </a>
                             </div>

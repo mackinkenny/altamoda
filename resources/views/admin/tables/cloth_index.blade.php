@@ -9,7 +9,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-8">
             <table class="table table-bordered" id="cloth-table">
                 <thead>
                 <tr>
@@ -22,7 +22,12 @@
                 </thead>
             </table>
         </div>
+
+        <div class="col-4 border-left bg-white">
+
+        </div>
     </div>
+
 
 @endsection
 

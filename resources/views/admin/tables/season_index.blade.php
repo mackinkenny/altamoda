@@ -4,13 +4,13 @@
 
     <div class="row mb-3 justify-content-end">
         <div class="col-auto">
-            <a href="{{ route('studio.create') }}" class="btn btn-success">Новый</a>
+            <a href="{{ route('season.create') }}" class="btn btn-success">Новый</a>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12">
-            <table class="table table-bordered" id="studio-table">
+        <div class="col-8">
+            <table class="table table-bordered" id="season-table">
                 <thead>
                 <tr>
                     <th>Id</th>
@@ -33,10 +33,10 @@
 @push('scripts')
     <script>
         $(function() {
-            $('#studio-table').DataTable({
+            $('#season-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '{!! route('datatable.getstudios') !!}',
+                ajax: '{!! route('datatable.getseasons') !!}',
                 columns: [
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
