@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-xl  py-0 w-100" style="z-index: 999; background: rgba(0,0,0,.0); position: fixed;">
     <div class="container">
         <div class="row">
-            <div class="col-3 px-4 py-3">
+            <div class="col-md-3 col-6 px-4 py-3">
                 <a href="/">
                 <img class="w-75" src="{{asset('images/2.png')}}" alt="">
                 </a>
@@ -50,7 +50,7 @@
                     {{--</div>--}}
                 </nav>
             </div>
-            <div class="col-2 p-4">
+            <div class="col-2 p-4 d-md-block d-none">
                 <img style="float: right;" src="{{asset('images/icons/Group.png')}}" alt="">
             </div>
         </div>
