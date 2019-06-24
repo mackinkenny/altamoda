@@ -1,11 +1,10 @@
 @extends('admin.admin')
 
 @section('admin_content')
-
     <form action="{{ route('kind.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group col-4">
-            <label for="name_of_kind"></label>
+            <label for="name_of_kind">Введите название</label>
             <input name="name" type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" id="name_of_kind" placeholder="" value="{{ old('name') }}">
             @if($errors->has('name'))
                 <span class="invalid-feedback" role="alert">

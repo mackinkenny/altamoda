@@ -11,8 +11,8 @@ class KindController extends Controller
 {
     public function index()
     {
-        $kind = Kind::find(3);
-        return view('kind.list',['kind' => $kind]);
+        $kinds = Kind::all();
+        return view('kind.list',['kinds' => $kinds]);
     }
 
     public function admin()

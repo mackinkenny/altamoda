@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Cloth;
 use App\Kind;
 use App\Parameter;
+use App\Season;
 use App\Showroom;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -61,5 +63,28 @@ class AdminController extends Controller
             })
             ->make(true);
     }
-    
+
+    public function getSeasons()
+    {
+        $seasons = Season::query();
+
+        return DataTables::of($seasons)
+            ->addColumn('action', function ($model) {
+                return '<a href="'.route('season.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
+                        <a href="'.route('season.destroy', $model->id).'" data-model="season" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+            })
+            ->make(true);
+    }
+
+    public function getCategoryes()
+    {
+        $categoryes = Category::query();
+
+        return DataTables::of($categoryes)
+            ->addColumn('action', function ($model) {
+                return '<a href="'.route('category.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
+                        <a href="'.route('category.destroy', $model->id).'" data-model="category" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+            })
+            ->make(true);
+    }
 }

@@ -11,6 +11,10 @@ class SeasonController extends Controller
 //    {
 //        return view('cloth.list');
 //    }
+    public function admin()
+    {
+        return view('admin.tables.season_index');
+    }
 
     public function create()
     {

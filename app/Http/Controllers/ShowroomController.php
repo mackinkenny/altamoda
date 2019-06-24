@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
 class ShowroomController extends Controller
@@ -9,7 +10,8 @@ class ShowroomController extends Controller
     //
     public function index()
     {
-        return view('showroom.list');
+        $categoryes = Category::all();
+        return view('showroom.list',['categoryes' => $categoryes]);
     }
 
     public function admin()

@@ -1,11 +1,10 @@
 @extends('admin.admin')
-
 @section('admin_content')
-<form action="{{ route('season.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('category.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-        <label for="name_of_season"></label>
-        <input name="name" type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" id="name_of_season" placeholder="" value="{{ old('name') }}">
+        <label for="name_of_category"></label>
+        <input name="name" type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" id="name_of_category" placeholder="" value="{{ old('name') }}">
         @if($errors->has('name'))
             <span class="invalid-feedback" role="alert">
 					<strong>{{ $errors->first('name') }}</strong>
