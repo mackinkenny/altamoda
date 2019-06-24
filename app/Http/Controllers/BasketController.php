@@ -13,7 +13,7 @@ class BasketController extends Controller
     //
     public function store(Request $request)
     {
-        dd(request()->ip());
+        dd(request()->session()->token());
         $basket = New Basket();
         $basket->user_ip = request()->ip();
         $basket->kind_id = $request->kind_id;
