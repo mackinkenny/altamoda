@@ -13,21 +13,15 @@ class BasketController extends Controller
     //
     public function store(Request $request)
     {
-        dd(request()->session()->token());
-        $basket = New Basket();
-        $basket->user_ip = request()->ip();
-        $basket->kind_id = $request->kind_id;
-        $basket->cloth_id = $request->cloth_id;
-        $parameters = Kind::find($basket->kind_id)->parameters;
 
-            $request->merge([
-                'parameters' => [
-                    'шея' => $request->get(0),
-                ]
-            ]);
+            $basket = New Basket();
+            $basket->user_tok = request()->session()->token();
+            $basket->kind_id = $request->kind_id;
+            $basket->cloth_id = $request->cloth_id;
+            $basket->parameters = $request->parameters;
 
-        $basket->save();
+            $basket->save();
 
-        return back();
+            return back();
     }
 }

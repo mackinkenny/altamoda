@@ -35,6 +35,7 @@
             @yield('content')
         </main>
     </div>
+@include('modals.basket_modal')
 @include('_partials/footer')
 </body>
 </html>

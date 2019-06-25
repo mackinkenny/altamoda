@@ -10,7 +10,7 @@
             </div>
             <div>
                 <div class="modal-body">
-                    <form class="text-secondary" action="{{route('basket.store')}}" method="POST">
+                    <form class="text-secondary" action="{{route('basket.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-4">
@@ -23,7 +23,7 @@
                                             <a class="nav-link" data-toggle="tab" role="tab"
                                                href="#{{$parameter->name}}{{$cloth->name}}{{$kind->name}}">
                                                 <label for="{{$parameter->name}}">{{$parameter->name}}</label>
-                                                <input name="{{$loop->index}}" class="form-control" onclick="" type="number" id="{{$parameter->name}}"
+                                                <input name="parameters[{{ $loop->index }}]" class="form-control" onclick="" type="number" id="{{$parameter->name}}"
                                                        onkeydown="limit(this);" onkeyup="limit(this);" required>
                                             </a>
                                         </li>

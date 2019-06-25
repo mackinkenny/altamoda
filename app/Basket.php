@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Basket extends Model
 {
     //
-    protected $table = 'parameters';
+    protected $table = 'baskets';
 
     protected $fillable = [
-        'user_ip', 'kind_id', 'cloth_id', 'parameters'
+        'user_tok', 'kind_id', 'cloth_id', 'parameters'
     ];
 
     protected $casts = [

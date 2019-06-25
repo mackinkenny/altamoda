@@ -51,7 +51,7 @@
                 </nav>
             </div>
             <div class="col-2 p-4 d-md-block d-none">
-                <img style="float: right;" src="{{asset('images/icons/Group.png')}}" alt="">
+                    <div><a href="" data-toggle="modal" data-target="#basketModal" ><i class="fas fa-shopping-bag text-light"></i></a></div>
             </div>
         </div>
     </div>
