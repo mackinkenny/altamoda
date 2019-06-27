@@ -13,7 +13,7 @@
                     <form class="text-secondary" action="{{route('basket.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-md-4 col-6">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <input type="hidden" value="{{$kind->id}}" name="kind_id">
                                     <input type="hidden" value="{{count($kind->parameters)}}" name="count">
@@ -30,7 +30,7 @@
                                     @endforeach
                                 </ul>
                             </div>
-                            <div class="col-8 pic">
+                            <div class="col-md-8 col-6 pic">
                                 <div class="tab-content col-12" id="myTabContent">
                                     @foreach($kind->parameters as $parameter)
                                         <div class="tab-pane fade" id="{{$parameter->name}}{{$cloth->name}}{{$kind->name}}" role="tabpanel" aria-labelledby="">

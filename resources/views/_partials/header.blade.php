@@ -50,7 +50,7 @@
                     {{--</div>--}}
                 </nav>
             </div>
-            <div class="col-2 p-4 d-md-block d-none">
+            <div class="col-2 p-md-4 p-3">
                     <div><a href="" data-toggle="modal" data-target="#basketModal" ><i class="fas fa-shopping-bag text-light"></i></a></div>
             </div>
         </div>

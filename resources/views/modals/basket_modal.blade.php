@@ -16,7 +16,7 @@
                     @if(count($baskets))
                         @foreach($baskets as $basket)
                             <div class="row p-4" style="border-bottom:1px #cecccc solid;">
-                            <div class="col-3">
+                            <div class="col-md-3 col-12">
                                 <span class="text-secondary h4 Montserrat">{{\App\Kind::find($basket->kind_id)->name}}</span>
                                 <img class="w-100 mt-3" src="{{asset('uploads/'.\App\Kind::find($basket->kind_id)->img_path)}}" alt="">
                             </div>
@@ -24,7 +24,7 @@
                                 {{--<span class="text-secondary h5 Montserrat">{{\App\Cloth::find($basket->cloth_id)->name}}</span>--}}
                                 {{--<img class="w-100" src="{{asset('uploads/'.\App\Cloth::find($basket->cloth_id)->img_path)}}" alt="">--}}
                             {{--</div>--}}
-                            <div class="col-6">
+                            <div class="col-md-6 col-8">
                                 <?php
                                     $params = \App\Kind::find($basket->kind_id)->parameters;
                                 ?>
