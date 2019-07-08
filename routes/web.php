@@ -44,6 +44,7 @@ Route::get('/showroom.catalog/{id}','ShowroomController@catalog')->name('showroo
 
 //other routes
 Route::get('/clothbasket/{id}','BasketController@clothbasket')->name('clothbasket');
+Route::get('/showroombasket/{id}','BasketController@showroombasket')->name('showroombasket');
 Route::get('/basketdelete/{id}','BasketController@delete')->name('basketdelete');
 //end others
 

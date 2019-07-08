@@ -46,10 +46,12 @@
 //                        ?>
                         @foreach($womens as $women)
                             <div class="col-4 text-center p-3 mb-3 season-effect">
+                                <a href="{{ asset('showroombasket/'.$women  ->id) }}">
                                 <div class="py-5" style="background-image: url('{{asset('uploads/'.$women->img_path)}}')">
                                 {{--<img class="w-100" style="height:230px; width:230px;border-radius:20px;" src="{{asset('uploads/'.$women->img_path)}}" alt="">--}}
                                 <p class="mt-2 text-secondary Montserrat" style="font-size:20px;">{{$women->name}}</p>
                                 </div>
+                                </a>
                             </div>
 
                         @endforeach

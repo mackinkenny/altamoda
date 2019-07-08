@@ -25,18 +25,19 @@
     @stack('styles')
 </head>
 <body>
-@include('_partials/header')
+
+@include('_partials.main_header')
 <div id="app">
+
     <main>
         @yield('content')
     </main>
 </div>
-{{--@include('modals.basket_modal')--}}
 @include('_partials/footer')
+@include('modals.basket')
 <ul class="menu bottomRight">
-    {{--<span class="position-absolute" style="top:-90%; width: 200px; left:-90px;">Задайте нам вопрос</span>--}}
     <li class="share top">
-        <i class="fas fa-share-alt-square fa-2x main-co" onclick="t()"></i>
+        <i class="fas fa-share-alt-square fa-2x main-co"></i>
         <ul class="submenu">
             {{--<li><a href="#" class="whatsapp"><span>Whatsapp</span><i class="fab fa-whatsapp fa-2x"></i></a></li>--}}
             {{--<li><a href="#" class="viber"><span>Viber</span><i class="fab fa-viber fa-2x"></i></a></li>--}}
@@ -82,17 +83,6 @@
                 alert('Ошибка');
             }
         });
-    }
-</script>
-<script>
-    function t() {
-        if($('.main-co').hasClass('active'))
-        {
-            $('.main-co').removeClass('active');
-        }
-        else {
-            $('.main-co').addClass('active');
-        }
     }
 </script>
 </body>

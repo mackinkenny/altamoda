@@ -45,6 +45,16 @@ class BasketController extends Controller
         return back();
     }
 
+    public function showroombasket($id)
+    {
+        $basket = new Basket();
+        $basket->user_tok = request()->session()->token();
+        $basket->showroom_id = $id;
+        $basket->save();
+
+        return back();
+    }
+
     public function delete($id)
     {
         $basket = Basket::find($id);
