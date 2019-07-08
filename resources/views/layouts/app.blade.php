@@ -25,7 +25,7 @@
     @stack('styles')
 </head>
 <body>
-{{--@include('_partials/header')--}}
+@include('_partials/header')
 <div id="app">
     <main>
         @yield('content')
