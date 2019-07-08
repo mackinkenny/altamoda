@@ -1,6 +1,6 @@
-<div class="modal fade backdrop-off" id="cloth_pick-{{$kind->id}}" tabindex="-1" role="form"
+<div class="modal fade backdrop-off bd-example-modal-lg" id="cloth_pick-{{$kind->id}}" tabindex="-1" role="form"
      aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-secondary" id="exampleModalLabel">Рекомендуемые ткани </h5>
@@ -12,7 +12,7 @@
                 <div class="modal-body">
                     <div class="row">
                         @foreach($kind->clothes as $cloth)
-                        <div class="col-6 text-center">
+                        <div class="col-4 text-center">
                             <a class="param" data-dismiss="modal" aria-label="Close"data-toggle="modal" data-target="#parameter_pick-{{$cloth->id}}{{ $kind->id }}" href="">
                             <img class="w-100" style="border-radius:20px;" src="{{asset('uploads/'.$cloth->img_path)}}" alt="">
                             <span class="py-4 text-secondary font-weight-bold Montserrat" style="font-size:20px;">{{$cloth->name}}</span>

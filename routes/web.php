@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contacts', function () {
-    return view('contacts');
+    return view('contact');
 })->name('contacts');
 //end other routes
 
@@ -39,9 +39,13 @@ Route::get('/category.admin','CategoryController@admin')->name('category.admin')
 
 //catalog routes
 Route::get('/cloth.catalog/{id}','ClothController@catalog')->name('cloth.catalog');
+Route::get('/showroom.catalog/{id}','ShowroomController@catalog')->name('showroom.catalog');
 //end catalog routes
 
-
+//other routes
+Route::get('/clothbasket/{id}','BasketController@clothbasket')->name('clothbasket');
+Route::get('/basketdelete/{id}','BasketController@delete')->name('basketdelete');
+//end others
 
 //resources//
 Route::resource('cloth', 'ClothController');

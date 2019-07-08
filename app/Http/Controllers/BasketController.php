@@ -14,14 +14,41 @@ class BasketController extends Controller
     public function store(Request $request)
     {
 
+
             $basket = New Basket();
-            $basket->user_tok = request()->session()->token();
-            $basket->kind_id = $request->kind_id;
-            $basket->cloth_id = $request->cloth_id;
-            $basket->parameters = $request->parameters;
+                $basket->user_tok = request()->session()->token();
+                $basket->kind_id = $request->kind_id;
+                $basket->cloth_id = $request->cloth_id;
+                $basket->parameters = $request->parameters;
 
-            $basket->save();
+                $basket->save();
 
-            return back();
+        $baskets = Basket::all();
+        foreach ($baskets as $basket)
+        {
+            if (\Carbon\Carbon::make($basket->created_at)->format('Y-m-d') < date('Y-m-d'))
+            {
+                $basket->delete();
+            }
+        }
+
+        return back();
+    }
+
+    public function clothbasket($id)
+    {
+        $basket = new Basket();
+        $basket->user_tok = request()->session()->token();
+        $basket->cloth_tip = $id;
+        $basket->save();
+
+        return back();
+    }
+
+    public function delete($id)
+    {
+        $basket = Basket::find($id);
+        $basket->delete();
+        return response()->json("success");
     }
 }

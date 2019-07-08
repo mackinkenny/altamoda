@@ -1,6 +1,6 @@
 <div class="modal fade" id="parameter_pick-{{$cloth->id}}{{ $kind->id }}" tabindex="15" role="form"
      aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-secondary" id="exampleModalLabel">{{$kind->name}}</h5>
@@ -34,7 +34,7 @@
                                 <div class="tab-content col-12" id="myTabContent">
                                     @foreach($kind->parameters as $parameter)
                                         <div class="tab-pane fade" id="{{$parameter->name}}{{$cloth->name}}{{$kind->name}}" role="tabpanel" aria-labelledby="">
-                                            <img class="w-100" src="{{asset('uploads/'.$parameter->img_path)}}" alt="">
+                                            <img class="w-75" src="{{asset('uploads/'.$parameter->img_path)}}" alt="">
                                         </div>
                                     @endforeach
                                 </div>

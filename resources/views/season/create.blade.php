@@ -1,7 +1,7 @@
 @extends('admin.admin')
 
 @section('admin_content')
-<form action="{{ route('season.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('season.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
         <label for="name_of_season"></label>

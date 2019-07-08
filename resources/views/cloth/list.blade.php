@@ -16,14 +16,14 @@
         <div class="row justify-content-center mx-md-5 mx-0 p-md-5 p-0">
             @foreach($seasons as $season)
             <div class="col-md-3 col-12 text-center mb-md-0 mb-5" >
-                <div class="p-md-5 p-0" style="background-image: url({{asset('uploads/'.$season->img_path)}}); background-size: cover; background-position: center;">
+                <div class="p-md-5 p-0 shadow-lg season-effect" style="background-image: url({{asset('uploads/'.$season->img_path)}}); background-size: cover; background-position: center;">
                     <div class="py-5 my-md-5 my-0" >
                         <div class="pt-5 pb-4">
                             <span class="h2 font-weight-bold mt-5 " style="font-size: 22px;color: #ffffff;text-align: center;font-style:normal">{{$season->name}}</span>
                             <br>
                         </div>
                         <div class="pb-5 mb-4">
-                            <a class="px-4 py-2 bg-dark" href="{{ route('cloth.catalog',$season->id) }}" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
+                            <a class="px-4 py-2 bg-dark" href="{{ route('cloth.catalog',$season->id,['show' => $season->name]) }}" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >Смотреть</a>
                         </div>
                     </div>
                 </div>
