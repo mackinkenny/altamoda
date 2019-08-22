@@ -13,10 +13,10 @@
     <div class="container pt-5">
         <div class="row mt-5">
             <div class="col-6">
-                <p class="display-3 text-secondary mb-5">
+                <p data-aos="fade-up" class="display-3 text-secondary mb-5">
                     Ткани
                 </p>
-                <div class="">
+                <div data-aos="fade-up" class="">
                     <a class="text-secondary Montserrat" href="/">Главная</a>
                     <i class="mx-4 text-secondary fa fa-angle-right"></i>
                     <a class="text-secondary Montserrat" href="{{ route('cloth.index') }}">Ткани</a>
@@ -25,7 +25,7 @@
         </div>
         <hr>
         <div class="row">
-        <div class="col-3 my-5">
+        <div data-aos="fade-up" class="col-3 my-5">
             <p class="text-secondary h3">
                 Каталог тканей
             </p>
@@ -48,7 +48,7 @@
             <div class="tab-content col-9" id="myTabContent">
                 <div class="tab-pane active show" style="min-height: 100vh;" id="summer" role="tabpanel" aria-labelledby="">
                     <div class="text-center">
-                        <p class="text-secondary Montserrat" style="font-size: 30px;">
+                        <p data-aos="fade-up" class="text-secondary Montserrat" style="font-size: 30px;">
                             Летняя ткань
                         </p>
                     </div>
@@ -57,7 +57,7 @@
                         $summers = \App\Cloth::where('season_id',1)->get();
                         ?>
                             @if($summers->count() == 0)
-                                <div class="text-center col-12">
+                                <div data-aos="fade-up" class="text-center col-12">
                                     <p class="text-secondary Montserrat" style="font-size: 20px;">
                                         Каталог пуст
                                     </p>
@@ -65,19 +65,21 @@
                             @endif
                         @foreach($summers as $summer)
 
-                                <div class="col-4 text-center p-3 mb-3 season-effect">
-                                    <a href="{{ asset('clothbasket/'.$summer->id) }}">
-                                    <img class="w-100" style="height:230px; width:230px;border-radius:20px;" src="{{asset('uploads/'.$summer->img_path)}}" alt="">
-                                    <p class="mt-2 text-secondary Montserrat" style="font-size:20px;">{{$summer->name}}</p>
-                                    </a>
-                        </div>
+                                <div data-aos="fade-up" class="col-4 text-center p-3 mb-3">
+                                    <div class="season-effect px-2" style="padding: 45% 0px; background-image: url({{ asset('uploads/'.$summer->img_path) }}); background-size: cover; width: 230px; height:230px; border-radius:20px;">
+                                        <a class="px-4 py-2 bg-dark but" href="{{ asset('clothbasket/'.$summer->id) }}" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >
+                                            Добавить в корзину
+                                        </a>>
+                                    </div>
+                                        <p class="mt-2 text-secondary Montserrat" style="font-size:20px;">{{$summer->name}}</p>
+                                 </div>
 
                                 @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" style="min-height: 100vh;" id="autumn" role="tabpanel" aria-labelledby="">
                     <div class="text-center">
-                        <p class="text-secondary Montserrat" style="font-size: 30px;">
+                        <p data-aos="fade-up" class="text-secondary Montserrat" style="font-size: 30px;">
                             Осенняя ткань
                         </p>
                     </div>
@@ -86,29 +88,27 @@
                         $autumns = \App\Cloth::where('season_id',4)->get();
                         ?>
                             @if($autumns->count() == 0)
-                                <div class="text-center col-12">
+                                <div data-aos="fade-up" class="text-center col-12">
                                     <p class="text-secondary Montserrat" style="font-size: 20px;">
                                         Каталог пуст
                                     </p>
                                 </div>
                             @endif
                         @foreach($autumns as $autumn)
-                            <div class="col-4 text-center">
-                                <form class="text-secondary" action="{{route('basket.store')}}" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <input type="text" value="{{$autumn->id}}" disabled>
-                                </form>
-                                <a href="">
-                                <img class="w-100" style="border-radius:20px;" src="{{asset('uploads/'.$autumn->img_path)}}" alt="">
-                                <span class="py-4 text-secondary font-weight-bold Montserrat" style="font-size:20px;">{{$autumn->name}}</span>
-                                </a>
-                            </div>
+                                <div data-aos="fade-up" class="col-4 text-center p-3 mb-3">
+                                        <div class="season-effect px-2" style="padding: 45% 0px; background-image: url({{ asset('uploads/'.$autumn->img_path) }}); background-size: cover; width: 230px; height:230px; border-radius:20px;">
+                                            <a class="px-4 py-2 bg-dark but" href="{{ asset('clothbasket/'.$autumn->id) }}" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >
+                                                Добавить в корзину
+                                            </a>>
+                                        </div>
+                                        <p class="mt-2 text-secondary Montserrat" style="font-size:20px;">{{$autumn->name}}</p>
+                                </div>
                         @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" style="min-height: 100vh;" id="winter" role="tabpanel" aria-labelledby="">
                     <div class="text-center">
-                        <p class="text-secondary Montserrat" style="font-size: 30px;">
+                        <p data-aos="fade-up" class="text-secondary Montserrat" style="font-size: 30px;">
                             Зимняя ткань
                         </p>
                     </div>
@@ -117,25 +117,27 @@
                         $winters = \App\Cloth::where('season_id',3)->get();
                         ?>
                             @if($winters->count() == 0)
-                                <div class="text-center col-12">
+                                <div data-aos="fade-up" class="text-center col-12">
                                     <p class="text-secondary Montserrat" style="font-size: 20px;">
                                         Каталог пуст
                                     </p>
                                 </div>
                             @endif
                         @foreach($winters as $winter)
-                            <div class="col-4 text-center">
-                                <a href="">
-                                <img class="w-100" style="border-radius:20px;" src="{{asset('uploads/'.$winter->img_path)}}" alt="">
-                                <span class="py-4 text-secondary font-weight-bold Montserrat" style="font-size:20px;">{{$winter->name}}</span>
-                                </a>
-                            </div>
+                                <div data-aos="fade-up" class="col-4 text-center p-3 mb-3">
+                                    <div class="season-effect px-2" style="padding: 45% 0px; background-image: url({{ asset('uploads/'.$winter->img_path) }}); background-size: cover; width: 230px; height:230px; border-radius:20px;">
+                                        <a class="px-4 py-2 bg-dark but" href="{{ asset('clothbasket/'.$winter->id) }}" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >
+                                            Добавить в корзину
+                                        </a>>
+                                    </div>
+                                    <p class="mt-2 text-secondary Montserrat" style="font-size:20px;">{{$winter->name}}</p>
+                                </div>
                         @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" style="min-height: 100vh;" id="spring" role="tabpanel" aria-labelledby="">
                     <div class="text-center">
-                        <p class="text-secondary Montserrat" style="font-size: 30px;">
+                        <p data-aos="fade-up" class="text-secondary Montserrat" style="font-size: 30px;">
                             Весенняя ткань
                         </p>
                     </div>
@@ -145,19 +147,21 @@
                         ?>
                         {{--@dd()--}}
                         @if($springs->count() == 0)
-                                <div class="text-center col-12">
+                                <div data-aos="fade-up" class="text-center col-12">
                                     <p class="text-secondary Montserrat" style="font-size: 20px;">
                                         Каталог пуст
                                     </p>
                                 </div>
                             @endif
                         @foreach($springs as $spring)
-                            <div class="col-4 text-center">
-                                <a href="">
-                                <img class="w-100" style="border-radius:20px;" src="{{asset('uploads/'.$spring->img_path)}}" alt="">
-                                <span class="py-4 text-secondary font-weight-bold Montserrat" style="font-size:20px;">{{$spring->name}}</span>
-                                </a>
-                            </div>
+                                <div data-aos="fade-up" class="col-4 text-center p-3 mb-3">
+                                    <div class="season-effect px-2" style="padding: 45% 0px; background-image: url({{ asset('uploads/'.$spring->img_path) }}); background-size: cover; width: 230px; height:230px; border-radius:20px;">
+                                        <a class="px-4 py-2 bg-dark but" href="{{ asset('clothbasket/'.$spring->id) }}" style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;" >
+                                            Добавить в корзину
+                                        </a>>
+                                    </div>
+                                    <p class="mt-2 text-secondary Montserrat" style="font-size:20px;">{{$spring->name}}</p>
+                                </div>
                         @endforeach
                     </div>
                 </div>

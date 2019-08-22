@@ -20,7 +20,7 @@
             @foreach($kinds as $kind)
 
             @if($i === 1)
-            <div class="col-md-4 col-12 px-4 my-md-0 my-2 season-effect">
+            <div data-aos="fade-up" class="col-md-4 col-12 px-4 my-md-0 my-2 season-effect">
                 <div class="row justify-content-center p-md-5 p-0" style="background-image: url({{asset('uploads/'.$kind->img_path)}}); background-size: cover; background-position: center; ">
                     <div class="p-md-5 p-0 my-md-5 my-5 text-center">
                         <div class="pt-5 mt-5">
@@ -38,7 +38,7 @@
                 @if($i === 2)
             <div class="col-md-8 col-12">
                 <div class="row">
-                    <div class="col-md-6 col-12 px-md-4 px-4 my-md-0 my-2 season-effect">
+                    <div data-aos="fade-up" class="col-md-6 col-12 px-md-4 px-4 my-md-0 my-2 season-effect">
                         <div class="row justify-content-center" style="background-image: url({{asset('uploads/'.$kind->img_path)}}); background-size: cover; background-position: center; ">
                             <div class="p-5 mb-5 text-center">
                                 <p class="h2 px-5 pt-5 pb-4 font-weight-bold Montserrat" style="color: #ffffff;text-align: center;font-weight:400;font-style:normal">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     @if(isset($kinds[$loop->index + 1]))
-                    <div class="col-md-6 col-12 px-md-4 px-4 my-md-0 my-2 season-effect">
+                    <div data-aos="fade-up" class="col-md-6 col-12 px-md-4 px-4 my-md-0 my-2 season-effect">
                         <div class="row justify-content-center" style="background-image: url({{asset('uploads/'.$kinds[$loop->index + 1]->img_path)}}); background-size: cover; background-position: center; ">
                             <div class="p-5 mb-5 text-center">
                                 <p class="h2 px-5 pt-5 pb-4 font-weight-bold Montserrat" style="color: #ffffff;text-align: center;font-weight:400;font-style:normal">
@@ -62,7 +62,7 @@
                         @endif
                 </div>
                 @if(isset($kinds[$loop->index + 2]))
-                <div class="col-12 py-md-4 py-0 px-md-2 px-2 my-md-0 my-2 season-effect">
+                <div data-aos="fade-up" class="col-12 py-md-4 py-0 px-md-2 px-2 my-md-0 my-2 season-effect">
                     <div class="row justify-content-center" style="background-image: url({{asset('uploads/'.$kinds[$loop->index + 2]->img_path)}}); background-size: cover; background-position: center; ">
                         <div class="p-5 mb-5 text-center">
                             <p class="h2 px-5 pt-5 pb-4 font-weight-bold Montserrat" style="color: #ffffff;text-align: center;font-weight:400;font-style:normal">
@@ -80,7 +80,7 @@
             @if($i === 5)
             <div class="col-md-8 col-12">
                 <div class="row">
-                    <div class="col-md-6 px-md-4 px-4 my-md-0 my-2 season-effect">
+                    <div data-aos="fade-up" class="col-md-6 px-md-4 px-4 my-md-0 my-2 season-effect">
                         <div class="row justify-content-center" style="background-image: url({{asset('uploads/'.$kind->img_path)}}); background-size: cover; background-position: center; ">
                             <div class="p-5 mb-5 text-center">
                                 <p class="h2 px-5 pt-5 pb-4 font-weight-bold Montserrat" style="color: #ffffff;text-align: center;font-weight:400;font-style:normal">
@@ -92,7 +92,7 @@
                     </div>
 
                     @if(isset($kinds[$loop->index + 1]))
-                    <div class="col-md-6 px-md-4 px-4 my-md-0 my-2 season-effect">
+                    <div data-aos="fade-up" class="col-md-6 px-md-4 px-4 my-md-0 my-2 season-effect">
                         <div class="row justify-content-center" style="background-image: url({{asset('uploads/'.$kinds[$loop->index + 1]->img_path)}}); background-size: cover; background-position: center; ">
                             <div class="p-5 mb-5 text-center">
                                 <p class="h2 px-5 pt-5 pb-4 font-weight-bold Montserrat" style="color: #ffffff;text-align: center;font-weight:400;font-style:normal">
@@ -105,7 +105,7 @@
                     @endif
                 </div>
                 @if(isset($kinds[$loop->index + 2]))
-                <div class="col-12 py-md-4 py-0 px-2 my-md-0 my-2 season-effect">
+                <div data-aos="fade-up" class="col-12 py-md-4 py-0 px-2 my-md-0 my-2 season-effect">
                     <div class="row justify-content-center" style="background-image: url({{asset('uploads/'.$kinds[$loop->index + 2]->img_path)}}); background-size: cover; background-position: center; ">
                         <div class="p-5 mb-5 text-center">
                             <p class="h2 px-5 pt-5 pb-4 font-weight-bold Montserrat" style="color: #ffffff;text-align: center;font-weight:400;font-style:normal">
@@ -121,7 +121,7 @@
             </div>
                 @endif
             @if($i === 8)
-            <div class="col-md-4 col-12 px-md-4 px-4 my-md-0 my-2 season-effect">
+            <div data-aos="fade-up" class="col-md-4 col-12 px-md-4 px-4 my-md-0 my-2 season-effect">
                 <div class="row justify-content-center p-md-5 p-0" style="background-image: url({{asset('uploads/'.$kind->img_path)}}); background-size: cover; background-position: center; ">
                     <div class="p-md-5 p-0 my-md-5 my-0 text-center">
                         <div class="pt-5 mt-5">

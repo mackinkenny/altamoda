@@ -69,6 +69,16 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);;
 }
+.but
+{
+
+    opacity: 0;
+    transition: 0.5s;
+}
+.season-effect:hover .but
+{
+    opacity:1;
+}
 .social-icon:hover {
     animation: 1500ms ease 0s normal none 1 running pulse;
 }

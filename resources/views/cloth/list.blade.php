@@ -15,7 +15,7 @@
     <div class="p-5">
         <div class="row justify-content-center mx-md-5 mx-0 p-md-5 p-0">
             @foreach($seasons as $season)
-            <div class="col-md-3 col-12 text-center mb-md-0 mb-5" >
+            <div data-aos="fade-up" class="col-md-3 col-12 text-center mb-md-0 mb-5" >
                 <div class="p-md-5 p-0 shadow-lg season-effect" style="background-image: url({{asset('uploads/'.$season->img_path)}}); background-size: cover; background-position: center;">
                     <div class="py-5 my-md-5 my-0" >
                         <div class="pt-5 pb-4">

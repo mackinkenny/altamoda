@@ -17,7 +17,7 @@
             <?php $k = 1 ?>
             @foreach($categoryes as $category)
                 @if($k == 1)
-            <div class="col-12 px-4 pt-2 season-effect" >
+            <div data-aos="fade-up" class="col-12 px-4 pt-2 season-effect" >
                 <div class="row justify-content-center p-5" style="background-image: url({{asset('/uploads/'. $category->img_path)}}); background-size: cover; background-position: center; ">
                     <div class="p-5 mb-5 text-center">
                         <p class="h2 px-5 pt-5 pb-4 font-weight-bold" style="color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
@@ -28,7 +28,7 @@
                 </div>
             </div>
                 @elseif($k == 2)
-            <div class="col-md-6 col-12 p-4 season-effect">
+            <div data-aos="fade-up" class="col-md-6 col-12 p-4 season-effect">
                 <div class="row justify-content-center p-5" style="background-image: url({{asset('/uploads/'. $category->img_path)}}); background-size: cover; background-position: center; ">
                     <div class="p-5 mb-5 text-center">
                         <p class="h2 px-5 pt-5 pb-4 font-weight-bold" style="color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
@@ -39,7 +39,7 @@
                 </div>
             </div>
                 @elseif($k == 3)
-            <div class="col-md-6 col-12 p-4 season-effect">
+            <div data-aos="fade-up" class="col-md-6 col-12 p-4 season-effect">
                 <div class="row justify-content-center p-5" style="background-image: url({{asset('/uploads/'. $category->img_path)}}); background-size: cover; background-position: center; ">
                     <div class="p-5 mb-5 text-center">
                         <p class="h2 px-5 pt-5 pb-4 font-weight-bold" style="color: #ffffff;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal">
