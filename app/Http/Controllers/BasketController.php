@@ -40,6 +40,7 @@ class BasketController extends Controller
         $basket = new Basket();
         $basket->user_tok = request()->session()->token();
         $basket->cloth_tip = $id;
+        $basket->cloth_id = $id;
         $basket->save();
 
         return back();

@@ -47,7 +47,6 @@
         </ul>
     </li>
 </ul>
-
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -76,7 +75,25 @@
         });
     });
 </script>
+@stack('js')
 <script>
+    function saveToCart(id) {
+        let buttonId = "#saveButton" + id;
+        $(buttonId).removeClass('bg-dark');
+        $(buttonId).addClass('bg-success');
+        $(buttonId).text("Добавлена");
+        $.ajax({
+            url: '/clothbasket/' + id,
+            method: 'GET',
+            success: data => {
+                location.reload();
+            },
+            error: () => {
+                alert('Ошибка');
+            }
+        });
+    }
+
     function f(id) {
         $.ajax({
             url: '/basketdelete/' + id,

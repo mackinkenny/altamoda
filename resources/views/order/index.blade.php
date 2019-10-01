@@ -109,7 +109,7 @@
 
                                     <div class="mb-3">
                                         <label for="address">Адрес</label>
-                                        <input type="text" class="form-control" id="address" placeholder="Чуй 1" required>
+                                        <input type="text" name="address" class="form-control" id="address" placeholder="Чуй 1" required>
                                     </div>
                                     <input type="hidden" class="form-control" name="amount" value="{{ $total }}">
                                     <hr class="mb-4">
