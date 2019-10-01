@@ -18,6 +18,7 @@ class CreateClothsTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->text('description')->nullable();
+            $table->integer('price')->nullable();
             $table->string('img_path')->nullable();
             $table->timestamps();
         });

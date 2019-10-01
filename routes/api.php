@@ -16,3 +16,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/order/success', 'OrderController@backUrl')->name('order.success');
+Route::post('/order/fail', 'OrderController@failUrl')->name('order.fail');

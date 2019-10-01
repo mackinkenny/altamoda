@@ -42,6 +42,11 @@ Route::get('/cloth.catalog/{id}','ClothController@catalog')->name('cloth.catalog
 Route::get('/showroom.catalog/{id}','ShowroomController@catalog')->name('showroom.catalog');
 //end catalog routes
 
+//order routes
+Route::get('/order', 'OrderController@index')->name('order.index');
+Route::post('/order','OrderController@store')->name('order.store');
+//end order routes
+
 //other routes
 Route::get('/clothbasket/{id}','BasketController@clothbasket')->name('clothbasket');
 Route::get('/showroombasket/{id}','BasketController@showroombasket')->name('showroombasket');

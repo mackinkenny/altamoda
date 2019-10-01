@@ -102,6 +102,13 @@
 
                 </div>
             </div>
+            <div class="modal-footer">
+                @if (count($baskets))
+                    <a class="btn btn-primary text-white" href="{{ route('order.index') }}">Оформить</a>
+                @else
+
+                @endif
+            </div>
         </div>
     </div>
 </div>
