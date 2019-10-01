@@ -38,4 +38,10 @@ class SeasonController extends Controller
         }
         return redirect()->route('season.create');
     }
+
+    public function edit(Request $request, $id)
+    {
+        $season = Season::find($id);
+        var_dump($season);
+    }
 }

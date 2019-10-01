@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="03582d01-a6d0-4991-82d3-5e6ab5a581c4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cloth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cloth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_10_073451_create_cloths_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_10_073451_create_cloths_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cloth/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cloth/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modals/basket.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modals/basket.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SeasonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SeasonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_partials/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -328,7 +325,7 @@
       <workItem from="1562576187547" duration="251000" />
       <workItem from="1562576772798" duration="7951000" />
       <workItem from="1569648079944" duration="5751000" />
-      <workItem from="1569899119523" duration="4342000" />
+      <workItem from="1569899119523" duration="6577000" />
     </task>
     <servers />
   </component>

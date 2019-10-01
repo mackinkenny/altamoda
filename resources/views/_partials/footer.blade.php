@@ -21,8 +21,8 @@
                 <nav class="nav flex-column">
 
                     <a class="nav-link text-white" href="{{asset('FAQ')}}">FAQ</a>
-                    <a class="nav-link text-white" href="{{asset('change')}}">Обмен и возврат</a>
-                    <a class="nav-link text-white" href="{{asset('order')}}">Доставка</a>
+                    <a class="nav-link text-white" href="{{ route('page.change') }}">Обмен и возврат</a>
+                    <a class="nav-link text-white" href="{{ route('page.delivery') }}">Доставка</a>
                 </nav>
             </div>
 

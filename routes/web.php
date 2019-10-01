@@ -20,6 +20,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contacts', function () {
     return view('contact');
 })->name('contacts');
+Route::get('/delivery', 'PageController@getDelivery')->name('page.delivery');
+Route::get('/change', 'PageController@getChange')->name('page.change');
 //end other routes
 
 
@@ -35,6 +37,7 @@ Route::get('/showroom.admin','ShowroomController@admin')->name('showroom.admin')
 Route::get('/parameter.admin','ParameterController@admin')->name('parameter.admin');
 Route::get('/season.admin','SeasonController@admin')->name('season.admin');
 Route::get('/category.admin','CategoryController@admin')->name('category.admin');
+Route::get('/season/{id}/edit', 'SeasonController@edit')->name('season.edit');
 //end admin routes
 
 //catalog routes
