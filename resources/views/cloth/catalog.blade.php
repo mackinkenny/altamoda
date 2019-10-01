@@ -74,6 +74,11 @@
                             <div data-aos="fade-up" class="col-4 text-center p-3 mb-3">
                                 <div class="season-effect px-2"
                                      style="padding: 45% 0px; background-image: url({{ asset('uploads/'.$summer->img_path) }}); background-size: cover; width: 230px; height:230px; border-radius:20px;">
+                                    <center>
+                                        <div class="col-md-5 col-xs-2">
+                                            <input type="number" class="form-control but" id="count" placeholder="м." value="1">
+                                        </div>
+                                    </center>
                                     <button onclick="saveToCart({{ $summer->id }})" id="saveButton{{ $summer->id }}"
                                             class="px-4 py-2 bg-dark but"
                                             style="text-decoration: none; color: white; font-weight: lighter; letter-spacing: 2px;">

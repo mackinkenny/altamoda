@@ -79,11 +79,12 @@
 <script>
     function saveToCart(id) {
         let buttonId = "#saveButton" + id;
+        let count = $('#count').val();
         $(buttonId).removeClass('bg-dark');
         $(buttonId).addClass('bg-success');
         $(buttonId).text("Добавлена");
         $.ajax({
-            url: '/clothbasket/' + id,
+            url: '/clothbasket/' + id + '/' + count,
             method: 'GET',
             success: data => {
                 location.reload();

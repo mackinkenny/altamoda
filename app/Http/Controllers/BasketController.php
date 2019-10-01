@@ -6,6 +6,7 @@ use App\Basket;
 use App\Kind;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 
 class BasketController extends Controller
@@ -35,12 +36,13 @@ class BasketController extends Controller
         return back();
     }
 
-    public function clothbasket($id)
+    public function clothbasket($id, $count)
     {
         $basket = new Basket();
         $basket->user_tok = request()->session()->token();
         $basket->cloth_tip = $id;
         $basket->cloth_id = $id;
+        $basket->count = $count;
         $basket->save();
 
         return back();

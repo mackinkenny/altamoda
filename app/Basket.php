@@ -10,7 +10,7 @@ class Basket extends Model
     protected $table = 'baskets';
 
     protected $fillable = [
-        'user_tok', 'kind_id', 'cloth_id', 'parameters'
+        'user_tok', 'kind_id', 'cloth_id', 'parameters', 'count',
     ];
 
     protected $casts = [

@@ -20,8 +20,13 @@ class OrderController extends Controller
             return redirect()->back();
         }
         foreach ($basket as $item) {
-            $cloth = Cloth::find($item->cloth_id)->price;
-            $price = $price + $cloth;
+            if($item->count){
+                $cloth = Cloth::find($item->cloth_id)->price;
+                $price = $price + ($cloth * $item->count);
+            }else{
+                $cloth = Cloth::find($item->cloth_id)->price;
+                $price = $price + $cloth;
+            }
         }
         $data = [
             'baskets' => $basket,

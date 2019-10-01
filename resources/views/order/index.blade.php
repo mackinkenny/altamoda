@@ -71,8 +71,13 @@
                                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                                 <div>
                                                     <h6 class="my-0">{{\App\Cloth::find($basket->cloth_tip)->name}}</h6>
-{{--                                                    <small class="text-muted">{{\App\Cloth::find($basket->cloth_tip)->description}}</small>--}}
+                                                    {{--                                                    <small class="text-muted">{{\App\Cloth::find($basket->cloth_tip)->description}}</small>--}}
                                                 </div>
+                                                @if ($basket->count)
+                                                    <span class="text-muted">{{ $basket->count }} м</span>
+                                                @else
+                                                    <span class="text-muted">1 м</span>
+                                                @endif
                                                 <span class="text-muted">{{\App\Cloth::find($basket->cloth_tip)->price}} сом</span>
                                             </li>
                                         @endif
@@ -89,36 +94,43 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="firstName">Имя</label>
-                                            <input type="text" name="first_name" class="form-control" id="firstName" placeholder="" required>
+                                            <input type="text" name="first_name" class="form-control" id="firstName"
+                                                   placeholder="" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="lastName">Фамилия</label>
-                                            <input type="text" name="last_name" class="form-control" id="lastName" placeholder="" required>
+                                            <input type="text" name="last_name" class="form-control" id="lastName"
+                                                   placeholder="" required>
                                         </div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="email">Email <span class="text-muted">*</span></label>
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com" required>
+                                        <input type="email" name="email" class="form-control" id="email"
+                                               placeholder="you@example.com" required>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="phone">Телефон <span class="text-muted">*</span></label>
-                                        <input type="number" name="phone" class="form-control" id="email" placeholder="996770000000" min="10" required>
+                                        <input type="number" name="phone" class="form-control" id="email"
+                                               placeholder="996770000000" min="10" required>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="address">Адрес</label>
-                                        <input type="text" name="address" class="form-control" id="address" placeholder="Чуй 1" required>
+                                        <input type="text" name="address" class="form-control" id="address"
+                                               placeholder="Чуй 1" required>
                                     </div>
                                     <input type="hidden" class="form-control" name="amount" value="{{ $total }}">
                                     <hr class="mb-4">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="same-address" required>
-                                        <label class="custom-control-label" for="same-address">Принимаю условия оферта</label>
+                                        <label class="custom-control-label" for="same-address">Принимаю условия
+                                            оферта</label>
                                     </div>
                                     <hr class="mb-4">
-                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Оформить заказ</button>
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Оформить заказ
+                                    </button>
                                 </form>
                                 <br>
                                 <div>
