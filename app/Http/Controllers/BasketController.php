@@ -16,19 +16,17 @@ class BasketController extends Controller
     {
 
 
-            $basket = New Basket();
-                $basket->user_tok = request()->session()->token();
-                $basket->kind_id = $request->kind_id;
-                $basket->cloth_id = $request->cloth_id;
-                $basket->parameters = $request->parameters;
+        $basket = New Basket();
+        $basket->user_tok = request()->session()->token();
+        $basket->kind_id = $request->kind_id;
+        $basket->cloth_id = $request->cloth_id;
+        $basket->parameters = $request->parameters;
 
-                $basket->save();
+        $basket->save();
 
         $baskets = Basket::all();
-        foreach ($baskets as $basket)
-        {
-            if (\Carbon\Carbon::make($basket->created_at)->format('Y-m-d') < date('Y-m-d'))
-            {
+        foreach ($baskets as $basket) {
+            if (\Carbon\Carbon::make($basket->created_at)->format('Y-m-d') < date('Y-m-d')) {
                 $basket->delete();
             }
         }
